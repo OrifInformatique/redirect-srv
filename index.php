@@ -8,8 +8,7 @@ $uri_array = explode("/", $uri);
 
 // Routes
 if (str_starts_with($uri, "stock/items")) {
-    $item_id = end($uri_array);
-    intval($item_id);
+    $item_id = (int) end($uri_array);
     header("Location: https://stock.sectioninformatique.ch/v2/items/"
         . $item_id);
     die();
